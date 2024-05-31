@@ -63,19 +63,16 @@ const login = async (req, res) => {
 
 //R A Z O R P A Y
 const checkout = async (req, res)=>{
-    res.status(200).send('hello checkout')
     const instance = new Razorpay({
         key_id: process.env.RAZORPAY_API_KEY,
         key_secret: process.env.RAZORPAY_API_SECRET,
     })    
-    console.log("key", process.env.RAZORPAY_API_SECRET)
     try {
         const options = {
             amount: Number(req.body.amount*100), // amount in smallest currency unit
             currency: "INR"
         };
         const order = await instance.orders.create(options);
-        console.log(order)
 
         res.status(200).json({
             success: true,
