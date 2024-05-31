@@ -120,7 +120,7 @@ const paymentVerification = async (req, res)=>{
 
         const productUrlMap = {
             'ae1': 'https://lordstore.shop/',
-            'ae2': 'http://lordstore.shop/project'
+            'ae2': 'https://lordstore.shop/project'
         }
 
         const redirectUrl = productUrlMap[productId];
@@ -129,7 +129,7 @@ const paymentVerification = async (req, res)=>{
             res.redirect(redirectUrl)
         }
         else{
-            res.redirect('http://localhost:5173/')
+            res.redirect('https://m-e-r-n-l-o-r-d-s-t-o-r-e.vercel.app/')
         }
     }else{
         res.status(400).json({

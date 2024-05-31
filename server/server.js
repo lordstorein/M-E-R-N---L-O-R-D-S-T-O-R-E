@@ -7,7 +7,7 @@ const router = require('./routes/auth-router')
 const connnectDB = require('./utils/db')
 
 const corsOptions = {
-    origin: "http://localhost:5173",
+    origin: "https://m-e-r-n-l-o-r-d-s-t-o-r-e.vercel.app/",
     method: "GET, POST, PUT, DELETE, PATCH, HEAD",
     credentials: true,
 }

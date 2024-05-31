@@ -20,9 +20,9 @@ export const Alightmotion = ()=>{
       
       
       const checkoutHandler = async (amount, productId)=>{
-        const {data:{key}} = await axios.get("http://localhost:5000/api/auth/getkey")
+        const {data:{key}} = await axios.get("https://mern-api-livid.vercel.app/api/auth/getkey")
 
-        const {data:{order}} = await axios.post("http://localhost:5000/api/auth/checkout",{
+        const {data:{order}} = await axios.post("https://mern-api-livid.vercel.app/api/auth/checkout",{
           amount,
           productId
         })
@@ -34,7 +34,7 @@ export const Alightmotion = ()=>{
           name: "LORDSTORE",
           description: "Editors are here",
           order_id: order.id,
-          callback_url: `http://localhost:5000/api/auth/paymentverification?productId=${productId}`,
+          callback_url: `https://mern-api-livid.vercel.app/api/auth/paymentverification?productId=${productId}`,
           prefill: {
             name: "",
             email: "",
