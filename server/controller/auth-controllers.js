@@ -63,7 +63,7 @@ const login = async (req, res) => {
 
 //R A Z O R P A Y
 const checkout = async (req, res)=>{
-    
+    res.json({msg: "successful"})
     const instance = new Razorpay({
         key_id: process.env.RAZORPAY_API_KEY,
         key_secret: process.env.RAZORPAY_API_SECRET,
