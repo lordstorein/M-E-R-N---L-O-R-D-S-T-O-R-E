@@ -68,9 +68,8 @@ const checkout = async (req, res)=>{
         key_id: process.env.RAZORPAY_API_KEY,
         key_secret: process.env.RAZORPAY_API_SECRET,
     })    
-
+    console.log("key", process.env.RAZORPAY_API_SECRET)
     try {
-        console.log('reached')
         const options = {
             amount: Number(req.body.amount*100), // amount in smallest currency unit
             currency: "INR"
