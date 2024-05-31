@@ -54,7 +54,7 @@ export const Aftereffect = ()=>{
     return <>
     <section className='min-h-[100vh] flex flex-col bg-[#f0f0f0] pt-[40px]'>
       <>
-        <Block link={'https://cosmofeed.com/vp/663b6b06ee9268001347385c'}  amount={29} img={"/images/five.jpg"} heading={'After Effect & Plugins'} title={'let your creativity out with this one'} productId={'ae1'}/>
+        <Block link={'https://cosmofeed.com/vp/66229898544a270013e827c5'}  amount={29} img={"/images/five.jpg"} heading={'After Effect & Plugins'} title={'let your creativity out with this one'} productId={'ae1'}/>
 
         <Block amount={149} img={"/images/daymm.webp"} heading={'Daymm cc'} title={"Don't worry your reaction won't be 'moye moye' after buying this"} productId={'ae2'}/>
 
