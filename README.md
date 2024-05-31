@@ -1,1 +1,0 @@
-# M-E-R-N---L-O-R-D-S-T-O-R-E
