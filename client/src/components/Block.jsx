@@ -1,5 +1,5 @@
 
-export const Block = ({amount, checkoutHandler, productId, heading, title, img}) => {
+export const Block = ({amount, checkoutHandler, productId, heading, title, img, link}) => {
     return <>
         <section className='h-fit sm:px-[25px] px-[10px] z-1 font-inter font-[500]'>
 
@@ -13,7 +13,7 @@ export const Block = ({amount, checkoutHandler, productId, heading, title, img})
                     <h1 className='sm:text-[2vw] text-[3vw]' >{title}</h1>
                     <div className='mt-[2vw]' >
                         <button className="bg-[#4d61fc] border-solid border-r-black  border-r-[1.5px] sm:text-[1.2vw] text-[2.5vw] text-white sm:px-[5vw] sm:py-[1vw] px-[6.5vw] py-[1.5vw]" >₹ {amount}</button>
-                        <button onClick={()=>checkoutHandler(amount, productId)} className='bg-[#4d61fc]  border-r-black  sm:text-[1.2vw] text-[2.5vw] text-white sm:px-[5vw] sm:py-[1vw] px-[6.5vw] py-[1.5vw] '>Buy</button>
+                        <Link to={link}><button onClick={()=>checkoutHandler(amount, productId)} className='bg-[#4d61fc]  border-r-black  sm:text-[1.2vw] text-[2.5vw] text-white sm:px-[5vw] sm:py-[1vw] px-[6.5vw] py-[1.5vw] '>Buy</button></Link>
                     </div>
                 </div>
             </div>

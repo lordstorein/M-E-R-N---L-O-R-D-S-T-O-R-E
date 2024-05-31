@@ -61,80 +61,80 @@ const login = async (req, res) => {
     }
 }
 
-//R A Z O R P A Y
-const checkout = async (req, res)=>{
-    const instance = new Razorpay({
-        key_id: process.env.RAZORPAY_API_KEY,
-        key_secret: process.env.RAZORPAY_API_SECRET,
-    })    
-    try {
-        const options = {
-            amount: Number(req.body.amount*100), // amount in smallest currency unit
-            currency: "INR"
-        };
-        const order = await instance.orders.create(options);
+// //R A Z O R P A Y
+// const checkout = async (req, res)=>{
+//     const instance = new Razorpay({
+//         key_id: process.env.RAZORPAY_API_KEY,
+//         key_secret: process.env.RAZORPAY_API_SECRET,
+//     })    
+//     try {
+//         const options = {
+//             amount: Number(req.body.amount*100), // amount in smallest currency unit
+//             currency: "INR"
+//         };
+//         const order = await instance.orders.create(options);
 
-        res.status(200).json({
-            success: true,
-            order,
-            productId: req.body.productId // Include the order in the response
-        });
-    } catch (error) {
-        console.log(error);
-        res.status(500).json({ message: "Internal server error" });
-    }
-}
+//         res.status(200).json({
+//             success: true,
+//             order,
+//             productId: req.body.productId // Include the order in the response
+//         });
+//     } catch (error) {
+//         console.log(error);
+//         res.status(500).json({ message: "Internal server error" });
+//     }
+// }
 
-const user = async (req, res)=>{
-    try {
-        const userData = await req.user;
-        return res.status(200).json({ userData })
-    } catch (error) {
-        console.log('error from the user route ')
-    }
-}
+// const user = async (req, res)=>{
+//     try {
+//         const userData = await req.user;
+//         return res.status(200).json({ userData })
+//     } catch (error) {
+//         console.log('error from the user route ')
+//     }
+// }
 
-const paymentVerification = async (req, res)=>{
+// const paymentVerification = async (req, res)=>{
 
-    const {razorpay_order_id, razorpay_payment_id, razorpay_signature} = req.body;
-    const productId = req.query.productId;
-    const body = razorpay_order_id + "|" + razorpay_payment_id;
-    const expectedSignature = crypto.createHmac('sha256', process.env.RAZORPAY_API_SECRET).update(body.toString()).digest('hex');
+//     const {razorpay_order_id, razorpay_payment_id, razorpay_signature} = req.body;
+//     const productId = req.query.productId;
+//     const body = razorpay_order_id + "|" + razorpay_payment_id;
+//     const expectedSignature = crypto.createHmac('sha256', process.env.RAZORPAY_API_SECRET).update(body.toString()).digest('hex');
 
-    const isAuthentic = expectedSignature === razorpay_signature;
+//     const isAuthentic = expectedSignature === razorpay_signature;
 
-    if(isAuthentic){
+//     if(isAuthentic){
 
-        await Payment.create({
-            razorpay_order_id,
-            razorpay_payment_id,
-            razorpay_signature,
-            productId,
-            eventDate: new Date(),
-            eventTime: new Date(),
-            eventTimestamp: new Date(),
-        })
+//         await Payment.create({
+//             razorpay_order_id,
+//             razorpay_payment_id,
+//             razorpay_signature,
+//             productId,
+//             eventDate: new Date(),
+//             eventTime: new Date(),
+//             eventTimestamp: new Date(),
+//         })
 
 
-        const productUrlMap = {
-            'ae1': 'https://lordstore.shop/',
-            'ae2': 'https://lordstore.shop/project'
-        }
+//         const productUrlMap = {
+//             'ae1': 'https://lordstore.shop/',
+//             'ae2': 'https://lordstore.shop/project'
+//         }
 
-        const redirectUrl = productUrlMap[productId];
+//         const redirectUrl = productUrlMap[productId];
 
-        if(redirectUrl){
-            res.redirect(redirectUrl)
-        }
-        else{
-            res.redirect('https://m-e-r-n-l-o-r-d-s-t-o-r-e.vercel.app/')
-        }
-    }else{
-        res.status(400).json({
-            success: false,
-        })
-    }
-};
+//         if(redirectUrl){
+//             res.redirect(redirectUrl)
+//         }
+//         else{
+//             res.redirect('https://m-e-r-n-l-o-r-d-s-t-o-r-e.vercel.app/')
+//         }
+//     }else{
+//         res.status(400).json({
+//             success: false,
+//         })
+//     }
+// };
 
 const getKey = (req,res)=>{
     res.status(200).json({key: process.env.RAZORPAY_API_KEY})
