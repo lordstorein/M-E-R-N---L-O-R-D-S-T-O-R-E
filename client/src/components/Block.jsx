@@ -1,4 +1,4 @@
-
+import {Link} from "react-router-dom"
 export const Block = ({amount, checkoutHandler, productId, heading, title, img, link}) => {
     return <>
         <section className='h-fit sm:px-[25px] px-[10px] z-1 font-inter font-[500]'>
