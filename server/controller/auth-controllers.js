@@ -70,6 +70,7 @@ const checkout = async (req, res)=>{
     })    
 
     try {
+        console.log('reached')
         const options = {
             amount: Number(req.body.amount*100), // amount in smallest currency unit
             currency: "INR"
