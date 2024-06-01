@@ -3,6 +3,8 @@ import gsap from "gsap";
 import { useAuth } from "../store/auth";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSquareArrowUpRight } from '@fortawesome/free-solid-svg-icons';
 
 export const Home = ()=>{
 
@@ -68,7 +70,7 @@ export const Home = ()=>{
             </div>
             <div className="sm:pt-0 pt-[15vw]">
                 <h5 id='Intos' className='text-end sm:pr-[60px] pr-[35px] sm:text-[1em] text-[3.5vw] text-white'>SKILLS ARE AVAILABLE</h5>
-                <h5 onClick={handleCheck} id='Into' className='cursor-pointer text-end sm:pr-[60px] pr-[35px] sm:text-[1em] text-[3.5vw] underline decoration-solid text-white'>Get into it<u className='cursor-pointer'>&#x2197;</u></h5>
+                <h5 onClick={handleCheck} id='Into' className='cursor-pointer text-end sm:pr-[60px] pr-[35px] sm:text-[1em] text-[3.5vw] underline decoration-solid text-white'>Get into it<u className='cursor-pointer'><FontAwesomeIcon icon={faSquareArrowUpRight}/></u></h5>
             </div>
             <div id='footer' className='border-solid border-t-white border-t-[1px] sm:px-10 px-[3vw] min-h-[50px] fixed bottom-0 z-40 w-screen flex justify-between items-center'>
                 <div className='sm:text-[15px] text-[12px]'>
