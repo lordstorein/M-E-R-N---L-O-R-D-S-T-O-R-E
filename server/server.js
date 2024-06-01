@@ -8,7 +8,7 @@ const connnectDB = require('./utils/db')
 const errorMiddleware = require('./middlewares/error-middleware')
 
 const corsOptions = {
-    origin: "https://m-e-r-n-l-o-r-d-s-t-o-r-e.vercel.app",
+    origin: "https://www.lordstore.shop",
     method: "GET, POST, PUT, DELETE, PATCH, HEAD",
     credentials: true,
 }
