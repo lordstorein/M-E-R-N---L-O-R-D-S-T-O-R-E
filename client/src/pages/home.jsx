@@ -76,9 +76,9 @@ export const Home = ()=>{
                 </div>
                 <div >
                     <ul className='flex justify-center items center gap-5'>
-                        <Link to='/privacypolicy'><li className='cursor-pointer sm:text-[15px] text-[12px] text-white'>Privacy Policy</li></Link>
-                        <Link to='/refundpolicy'><li className='cursor-pointer sm:text-[15px] text-[12px] text-white'>Refund policy</li></Link>
-                        <Link to='/termsandconditions'><li className='cursor-pointer sm:text-[15px] text-[12px] text-white'>Terms&conditions</li></Link>
+                        <Link to='/privacypolicy'><li className='cursor-pointer sm:text-[15px] text-[10px] text-white'>Privacy Policy</li></Link>
+                        <Link to='/refundpolicy'><li className='cursor-pointer sm:text-[15px] text-[10px] text-white'>Refund policy</li></Link>
+                        <Link to='/termsandconditions'><li className='cursor-pointer sm:text-[15px] text-[10px] text-white'>Terms&conditions</li></Link>
                     </ul>
                 </div>
             </div>
