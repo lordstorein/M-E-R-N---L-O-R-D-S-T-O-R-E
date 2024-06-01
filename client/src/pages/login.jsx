@@ -44,9 +44,9 @@ export const Login = ()=>{
       })
 
       console.log("login form",response)
+      const res_data = await response.json();
 
       if (response.ok) {
-        const res_data = await response.json();
         storeTokenInLS(res_data.token);
         setUser({email:"", password:"" })
         toast.success("Login successful")

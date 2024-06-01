@@ -1,12 +1,7 @@
 const { z } = require('zod');
 
-const signupSchema = z.object({
-  username: z
-    .string()
-    .min(3, { message: "Name must be at least 3 characters" })
-    .max(50, { message: "Name must not be more than 50 characters" })
-    .nonempty({ message: "Name is required" }),
 
+const loginSchema = z.object({
   email: z
     .string()
     .trim()
@@ -21,6 +16,14 @@ const signupSchema = z.object({
     .min(4, { message: "Password must be at least 4 characters" })
     .max(50, { message: "Password must not be more than 50 characters" })
     .nonempty({ message: "Password is required" })
+})
+
+const signupSchema = loginSchema.extend({
+  username: z
+    .string()
+    .min(3, { message: "Name must be at least 3 characters" })
+    .max(50, { message: "Name must not be more than 50 characters" })
+    .nonempty({ message: "Name is required" }),
 });
 
-module.exports = signupSchema;
+module.exports = {signupSchema, loginSchema};

@@ -21,7 +21,7 @@ const signup = async (req, res)=>{
 
         const userExists = await User.findOne({email})
         if(userExists){
-            return res.status(400).json({msg: "email already exist"})
+            return res.status(400).json({message: "email already exist"})
         }
 
         const saltRound = 10;
@@ -31,7 +31,7 @@ const signup = async (req, res)=>{
 
         res.status(200).send({message: 'registration successful', token: await userCreated.generateToken(), userId: userCreated._id.toString()})
     } catch (error) {
-        console.log(error);
+        next(error)
     }
 };
 
@@ -54,10 +54,12 @@ const login = async (req, res) => {
             });
         } else {
             res.status(401).json({ message: 'Invalid email or password' });
+            
         }
 
     } catch (error) {
         res.status(500).json({ message: "Internal server error" });
+        next(error)
     }
 }
 

@@ -47,9 +47,9 @@ export const Signup = ()=>{
         },
         body: JSON.stringify(user),
       });
+      const res_data = await response.json()
 
       if (response.ok) {
-        const res_data = await response.json()
         storeTokenInLS(res_data.token)
         setUser({
           username: "",

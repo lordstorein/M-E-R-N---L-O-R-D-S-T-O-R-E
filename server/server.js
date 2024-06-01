@@ -5,6 +5,7 @@ const Razorpay = require('razorpay')
 const app = express()
 const router = require('./routes/auth-router')
 const connnectDB = require('./utils/db')
+const errorMiddleware = require('./middlewares/error-middleware')
 
 const corsOptions = {
     origin: "https://m-e-r-n-l-o-r-d-s-t-o-r-e.vercel.app",
@@ -19,6 +20,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use('/api/auth', router )
+
+app.use(errorMiddleware);
 
 const PORT = process.env.PORT || 5000;
 
