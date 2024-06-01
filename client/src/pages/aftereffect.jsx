@@ -56,13 +56,11 @@ export const Aftereffect = ()=>{
       <>
         <Block link={'https://cosmofeed.com/vp/66229898544a270013e827c5'}  amount={29} img={"/images/five.jpg"} heading={'After Effect & Plugins'} title={'let your creativity out with this one'} productId={'ae1'}/>
 
-        <Block amount={149} img={"/images/daymm.webp"} heading={'Daymm cc'} title={"Don't worry your reaction won't be 'moye moye' after buying this"} productId={'ae2'}/>
+        <Block link={'https://cosmofeed.com/vp/65ffcc05cf68d10013468d08'} amount={149} img={"/images/daymm.webp"} heading={'Daymm cc'} title={"Don't worry your reaction won't be 'moye moye' after buying this"} productId={'ae2'}/>
 
-        <Block amount={129} img={"/images/cc_00000.webp"} heading={'W cc'} title={"Don't buy if you need this instead, buy if you don't need this"} productId={'ae3'}/>
+        <Block link={"https://cosmofeed.com/vp/6601719892c1f3001373350e"} amount={129} img={"/images/cc_00000.webp"} heading={'W cc'} title={"Don't buy if you need this instead, buy if you don't need this"} productId={'ae3'}/>
 
-        <Block amount={99} img={"/images/Goat_Cc_00000.jpg"} heading={'Goat cc'} title={"Try it out, you'll love it"} productId={'ae4'}/>
-
-        <Block amount={49} img={"/images/blue_00000.webp"} heading={'Good cc'} title={"Skip the panic, buy the fun!"}  productId={'ae5'}/>
+        <Block link={'https://cosmofeed.com/vp/6601754e8273ca0014878fa7'} amount={49} img={"/images/blue_00000.webp"} heading={'Good cc'} title={"Skip the panic, buy the fun!"}  productId={'ae4'}/>
 
       </>
       <Footer/>

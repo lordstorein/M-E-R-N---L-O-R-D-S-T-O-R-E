@@ -54,7 +54,7 @@ export const Others = ()=>{
     return <>
     <section className='min-h-[100vh] flex flex-col bg-[#f0f0f0] pt-[40px]'>
       <>
-        <Block amount={29} img={"/images/overlays.jpg"} heading={'Overlays'} title={'All are same? Try lordstore once'} productId={'o1'}/>
+        <Block link={'https://cosmofeed.com/vp/66054b2ce790f900121de8d0'} amount={49} img={"/images/overlays.jpg"} heading={'Overlays'} title={'All are same? Try lordstore once'} productId={'o1'}/>
       </>
       <Footer/>
    

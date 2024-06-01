@@ -54,9 +54,9 @@ export const Project = ()=>{
     return <>
     <section className='min-h-[100vh] flex flex-col bg-[#f0f0f0] pt-[40px]'>
       <>
-        <Block amount={29} img={"/images/gojo thumbnail_00000.jpg"} heading={'Project file'} title={'Nashe se chadh gyi - Satoru Gojo'} productId={'p1'}/>
+        <Block link={'https://cosmofeed.com/vp/663b6b06ee9268001347385c'} amount={29} img={"/images/gojo thumbnail_00000.jpg"} heading={'Project file'} title={'Nashe se chadh gyi - Satoru Gojo'} productId={'p1'}/>
 
-        <Block amount={49} img={'/images/narutoshion.jpg'} heading={'Project file'} title={'dheere dheere se - Naurto & Shion'} productId={'p2'}/>
+        <Block link={'https://cosmofeed.com/vp/662b4c2487d2b80014864999'} amount={49} img={'/images/narutoshion.jpg'} heading={'Project file'} title={'dheere dheere se - Naurto & Shion'} productId={'p2'}/>
       </>
       <Footer/>
    
