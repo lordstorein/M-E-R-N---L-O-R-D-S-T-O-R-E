@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../store/auth";
 import { useEffect } from "react";
+import {toast} from "react-toastify"
 
 export const Login = ()=>{
 
@@ -48,8 +49,10 @@ export const Login = ()=>{
         const res_data = await response.json();
         storeTokenInLS(res_data.token);
         setUser({email:"", password:"" })
+        toast.success("Login successful")
         navigate("/aftereffect");
       }else {
+        toast.error(res_data.extraDetails ? res_data.extraDetails : res_data.message)
         console.log("invalid credentials");
       }
     } catch (error) {

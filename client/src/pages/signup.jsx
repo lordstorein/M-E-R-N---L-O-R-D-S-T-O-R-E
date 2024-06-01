@@ -3,6 +3,7 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../store/auth";
 import { useEffect } from "react";
+import {toast} from "react-toastify"
 
 export const Signup = ()=>{
 
@@ -55,9 +56,11 @@ export const Signup = ()=>{
           email: "",
           password: ""
         });
-        navigate("/login");
+        toast.success("Registration successful")
+        navigate("/aftereffect");
+      }else{
+        toast.error(res_data.extraDetails ? res_data.extraDetails : res_data.message)
       }
-      console.log(response);
 
     } catch (error) {
       console.log("register failed", error);
