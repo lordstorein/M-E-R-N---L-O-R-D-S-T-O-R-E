@@ -141,4 +141,4 @@ const getKey = (req,res)=>{
 }
 
 
-module.exports = { home, signup, login, checkout, paymentVerification, getKey, user};
+module.exports = { home, signup, login, getKey};
