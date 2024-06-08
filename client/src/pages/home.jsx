@@ -63,13 +63,13 @@ export const Home = ()=>{
                 <h1 id='logo' className='text-white ml-[3.5vw] text-[22px]'>Lordstore</h1>
             </div>
             <div className='sm:min-h-[25vw] min-h-[30vw] mt-10 pl-[3vw]  inline-block'>
-                <h1 id='heading' className='sm:text-[10vw] text-[16vw] sm:leading-[10vw] leading-[15vw] font-[600] text-white'>SKILLS <br />
+                <h1 id='heading' className='sm:text-[10vw] text-[16vw] sm:leading-[10vw] leading-[15vw] font-[600] text-white'>EDITORS <br />
                 ARE HERE
                 </h1>
                 <h5 id='Ashish' className='text-right font-bold sm:text-[1.3vw] text-gray-100'>BY ASHISH</h5>
             </div>
             <div className="sm:pt-0 pt-[15vw]">
-                <h5 id='Intos' className='text-end sm:pr-[60px] pr-[35px] sm:text-[1em] text-[3.5vw] text-white'>SKILLS ARE AVAILABLE</h5>
+                <h5 id='Intos' className='text-end sm:pr-[60px] pr-[35px] sm:text-[1em] text-[3.5vw] text-white'>THINGS ARE AVAILABLE</h5>
                 <h5 onClick={handleCheck} id='Into' className='cursor-pointer text-end sm:pr-[60px] pr-[35px] sm:text-[1em] text-[3.5vw] underline decoration-solid text-white'>Get into it<u className='cursor-pointer'> <FontAwesomeIcon icon={faSquareArrowUpRight}/></u></h5>
             </div>
             <div id='footer' className='border-solid border-t-white border-t-[1px] sm:px-10 px-[3vw] min-h-[50px] fixed bottom-0 z-40 w-screen flex justify-between items-center'>
