@@ -63,7 +63,7 @@ export const Home = ()=>{
                 <h1 id='logo' className='text-white ml-[3.5vw] text-[22px]'>Lordstore</h1>
             </div>
             <div className='sm:min-h-[25vw] min-h-[30vw] mt-10 pl-[3vw]  inline-block'>
-                <h1 id='heading' className='sm:text-[10vw] text-[16vw] sm:leading-[10vw] leading-[15vw] font-[600] text-white'>EDITORS <br />
+                <h1 id='heading' className='sm:text-[10vw] text-[16vw] sm:leading-[10vw] leading-[15vw] font-[600] text-white'>PROS <br />
                 ARE HERE
                 </h1>
                 <h5 id='Ashish' className='text-right font-bold sm:text-[1.3vw] text-gray-100'>MADE BY ASHISH</h5>
