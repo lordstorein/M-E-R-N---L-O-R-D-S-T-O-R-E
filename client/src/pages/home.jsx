@@ -66,7 +66,7 @@ export const Home = ()=>{
                 <h1 id='heading' className='sm:text-[10vw] text-[16vw] sm:leading-[10vw] leading-[15vw] font-[600] text-white'>EDITORS <br />
                 ARE HERE
                 </h1>
-                <h5 id='Ashish' className='text-right font-bold sm:text-[1.3vw] text-gray-100'>BY ASHISH</h5>
+                <h5 id='Ashish' className='text-right font-bold sm:text-[1.3vw] text-gray-100'>MADE BY ASHISH</h5>
             </div>
             <div className="sm:pt-0 pt-[15vw]">
                 <h5 id='Intos' className='text-end sm:pr-[60px] pr-[35px] sm:text-[1em] text-[3.5vw] text-white'>THINGS ARE AVAILABLE</h5>
